@@ -26,6 +26,7 @@ Here's a reminder about what the `patrons` table looks like!
 Drag each suggestion to the proper zone depending on whether or not it will improve the query's style.
 
 | Make suggestion | Don't make suggestion |
+| --------------- | --------------------- |
 | make `CARD_NUM` and `TOTAL_FINE` lowercase | Capitalize `patrons` |
 | Capitalize `from` | Make `SELECT` lowercase |
 | Add a `;` at the end of the query | All code should be just one line |
@@ -133,6 +134,7 @@ The video introduced several differences between SQL Server and PostgreSQL. Thes
 Drag the statement to the database management system that it correctly describes.
 
 | PostgreSQL | SQL Server |
+| ---------- | ---------- |
 | Developed at University of California, Berkeley | Has both free and enterprise versions |
 | Research funds provided by DARPA | Created by Microsoft |
 | Free and open source | Queried using T-SQL |
