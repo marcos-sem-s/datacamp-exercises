@@ -1,5 +1,6 @@
 ## What are the advantages of databases?
 Which of the following are advantages of storing data in a database, rather than using traditional formats like spreadsheets? Select one answer.
+
 - [ ] More storage
 - [ ] Many people can use at once
 - [ ] Can be secured with encryption
@@ -94,4 +95,3 @@ Sort each item into the correct data type.
 | ------- | --- | ------- |
 | Phone number such as 321-123-5555 | Number of mailing list subscribers such as 9782 | Weight in tons such as 5.67 |
 | Product reviews written by customers | Model year such as 2004 | Product prices in dollars such as 63.75 |
-

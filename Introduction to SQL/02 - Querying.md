@@ -169,12 +169,7 @@ FROM books
 LIMIT 10;
 ```
 
-The database in this course is a PostgreSQL database, so you won't be able to run SQL Server code in any of the exercises. What if you did want to update the above query to work with SQL Server, though? How would you do that?
-
-Answer the question
-50XP
-Possible Answers
-Select one answer
+The database in this course is a PostgreSQL database, so you won't be able to run SQL Server code in any of the exercises. What if you did want to update the above query to work with SQL Server, though? How would you do that? Select one answer
 
 - [ ] Replace `FROM` with `TABLE`
 - [ ] Replace `SELECT`, `FROM`, and `LIMIT` with the corresponding SQL Server keywords
