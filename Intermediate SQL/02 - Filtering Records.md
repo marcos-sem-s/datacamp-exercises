@@ -21,11 +21,8 @@ Filtering with `WHERE` allows you to analyze your data better. You may have a da
 
 Now it's your turn to use the `WHERE` clause to filter numeric values!
 
-<<<<<<< HEAD
 **Instructions**
 
-=======
->>>>>>> 3f701875db4d16cb828fcf577599b01e7f618bd4
 1. Select the `film_id` and `imdb_score` from the `reviews` table and filter on scores higher than 7.0.
 
 ``` sql
@@ -66,11 +63,7 @@ Apply a filter to select only `Spanish` from the `language` field.
 ``` sql
 SELECT COUNT(language) AS count_spanish
 FROM films
-<<<<<<< HEAD
-WHERE language = Spanish;
-=======
-WHERE language  = Spanish;
->>>>>>> 3f701875db4d16cb828fcf577599b01e7f618bd4
+WHERE language = 'Spanish';
 ```
 
 <br>
