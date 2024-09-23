@@ -167,7 +167,3 @@ FROM reviews;
 - [ ] facebook likes
 - [x] "facebook likes"
 - [ ] facebook, likes
-
-<br>
-
-## 
