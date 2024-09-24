@@ -68,7 +68,6 @@ WHERE language = 'Spanish';
 
 <br>
 
-<<<<<<< HEAD
 ## Using AND
 The following exercises combine `AND` and `OR` with the `WHERE` clause. Using these operators together strengthens your queries and analyses of data.
 
@@ -100,7 +99,7 @@ WHERE (language = 'German')
 SELECT *
 FROM films
 WHERE (language = 'German')
-    AND (release_year > 2000 and release_year < 2010);
+    AND (release_year > 2000 AND release_year < 2010);
 ```
 
 <br>
@@ -118,7 +117,7 @@ It looks like a lot, but you can build the query up one step at a time to get co
 SELECT title, release_year
 FROM films
 WHERE release_year = 1990 
-    OR release_year = 1999
+    OR release_year = 1999;
 ```
 
 2. Filter the records to only include English or Spanish-language films.
