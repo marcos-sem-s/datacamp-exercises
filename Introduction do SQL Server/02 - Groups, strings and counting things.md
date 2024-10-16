@@ -140,9 +140,61 @@ You might be fortunate, and find that the interesting parts of your strings are 
 
 1. You can use `CHARINDEX` to find a specific character or pattern within a column. Edit the query to return the `CHARINDEX` of the string `'Weather'` whenever it appears within the `description` column.
 
-2. 
+``` sql
+SELECT 
+  description, 
+  LEN('Weather', description) 
+FROM 
+  grid
+WHERE description LIKE '%Weather%';
+```
 
-3. 
+2. We now know where 'Weather' begins in the description column. But where does it end? We could manually count the number of characters, but, for longer strings, this is more work, especially when we can also find the length with LEN.
+
+``` sql
+SELECT 
+  description, 
+  CHARINDEX('Weather', description),
+  LEN(description)
+FROM 
+  grid
+WHERE description LIKE '%Weather%';
+```
+
+3. Now we use SUBSTRING to return everything after Weather for the first ten rows. The start index here is 15, because the CHARINDEX for each row is 8, and the LEN of Weather is 7.
+
+``` sql
+SELECT TOP(10)
+  description, 
+  CHARINDEX('Weather', description),
+  LEN('Weather'),
+  SUBSTRING(
+    description,
+    15,
+    LEN(description)
+  )
+FROM 
+  grid
+WHERE description LIKE '%Weather%';
+```
+
+<br>
+
+## GROUP BY
+In an earlier exercise, you wrote a separate `WHERE` query to determine the amount of demand lost for a specific region. We wouldn't want to have to write individual queries for every region. Fortunately, you don't have to write individual queries for every region. With GROUP BY, you can obtain a sum of all the unique values for your chosen column, all at once.
+
+You'll return to the grid table here and calculate the total lost demand for all regions.
+
+**Instructions**
+
+- Select nerc_region and the sum of demand_loss_mw for each region.
+- Exclude values where demand_loss_mw is NULL.
+- Group the results by nerc_region.
+- Arrange in descending order of demand_loss.
+
+``` sql
+
+```
 
 <br>
 
