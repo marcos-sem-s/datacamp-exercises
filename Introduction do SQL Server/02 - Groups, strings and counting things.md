@@ -149,7 +149,7 @@ FROM
 WHERE description LIKE '%Weather%';
 ```
 
-2. We now know where 'Weather' begins in the description column. But where does it end? We could manually count the number of characters, but, for longer strings, this is more work, especially when we can also find the length with LEN.
+2. We now know where `'Weather'` begins in the description column. But where does it end? We could manually count the number of characters, but, for longer strings, this is more work, especially when we can also find the length with `LEN`.
 
 ``` sql
 SELECT 
@@ -161,7 +161,7 @@ FROM
 WHERE description LIKE '%Weather%';
 ```
 
-3. Now we use SUBSTRING to return everything after Weather for the first ten rows. The start index here is 15, because the CHARINDEX for each row is 8, and the LEN of Weather is 7.
+3. Now we use `SUBSTRING` to return everything after Weather for the first ten rows. The start index here is 15, because the `CHARINDEX` for each row is 8, and the `LEN` of Weather is 7.
 
 ``` sql
 SELECT TOP(10)
@@ -181,21 +181,124 @@ WHERE description LIKE '%Weather%';
 <br>
 
 ## GROUP BY
-In an earlier exercise, you wrote a separate `WHERE` query to determine the amount of demand lost for a specific region. We wouldn't want to have to write individual queries for every region. Fortunately, you don't have to write individual queries for every region. With GROUP BY, you can obtain a sum of all the unique values for your chosen column, all at once.
+In an earlier exercise, you wrote a separate `WHERE` query to determine the amount of demand lost for a specific region. We wouldn't want to have to write individual queries for every region. Fortunately, you don't have to write individual queries for every region. With `GROUP BY`, you can obtain a sum of all the unique values for your chosen column, all at once.
 
-You'll return to the grid table here and calculate the total lost demand for all regions.
+You'll return to the `grid` table here and calculate the total lost demand for all regions.
 
 **Instructions**
 
-- Select nerc_region and the sum of demand_loss_mw for each region.
-- Exclude values where demand_loss_mw is NULL.
-- Group the results by nerc_region.
-- Arrange in descending order of demand_loss.
+- Select `nerc_region` and the sum of `demand_loss_mw` for each region.
+- Exclude values where `demand_loss_mw` is `NULL`.
+- Group the results by `nerc_region`.
+- Arrange in descending order of `demand_loss`.
 
 ``` sql
-
+SELECT 
+  nerc_region,
+  SUM(demand_loss_mw) AS demand_loss
+FROM 
+  grid
+WHERE 
+  demand_loss_mw IS NOT NULL
+GROUP BY
+  nerc_region
+ORDER BY 
+  demand_loss DESC;
 ```
 
 <br>
 
-## 
+## Having
+`WHERE` is used to filter rows before any grouping occurs. Once you have performed a grouping operation, you may want to further restrict the number of rows returned. This is a job for `HAVING`. In this exercise, you will modify an existing query to use `HAVING`, so that only those results with a sum of over 10000 are returned.
+
+**Instructions**
+
+- Modify the provided query to remove the `WHERE` clause.
+- Replace it with a `HAVING` clause so that only results with a total `demand_loss_mw` of greater than 10000 are returned.
+
+``` sql
+SELECT 
+  nerc_region, 
+  SUM (demand_loss_mw) AS demand_loss 
+FROM 
+  grid
+GROUP BY 
+  nerc_region
+HAVING 
+  SUM(demand_loss_mw) > 10000 
+ORDER BY 
+  demand_loss DESC;
+```
+
+<br>
+
+## Grouping together
+In this final exercise, you will combine `GROUP BY` with aggregate functions such as `MIN` that you've seen earlier in this chapter.
+
+To conclude this chapter, we'll return to the eurovision table from the first chapter.
+
+**Instructions**
+
+1. Use `MIN` and `MAX` to retrieve the minimum and maximum values for the place and points columns respectively.
+
+``` sql
+SELECT 
+  MIN(place) AS hi_place, 
+  MAX(place) AS lo_place, 
+  MIN(points) AS min_points, 
+  MAX(points) AS max_points 
+FROM 
+  eurovision;
+```
+
+2. Let's obtain more insight from our results by adding a `GROUP BY` clause. Group the results by `country`.
+
+``` sql
+SELECT 
+  MIN(place) AS hi_place, 
+  MAX(place) AS lo_place, 
+  MIN(points) AS min_points, 
+  MAX(points) AS max_points 
+FROM 
+  eurovision;
+GROUP BY 
+  country;
+```
+
+3. The previous query results did not identify the country. Let's amend the query, returning the count of entries per country and the country column. Complete the aggregate section by finding the average place for each country.
+
+``` sql
+SELECT 
+  COUNT(country),
+  country,
+  AVG(place)
+  MIN(place) AS hi_place, 
+  MAX(place) AS lo_place, 
+  MIN(points) AS min_points, 
+  MAX(points) AS max_points 
+FROM 
+  eurovision;
+GROUP BY 
+  country;
+```
+
+4. Finally, our results are skewed by countries who only have one entry. Apply a filter so we only return rows where the `country_count` is greater than 5. Then arrange by `avg_place` in ascending order, and `avg_points` in descending order.
+
+``` sql
+SELECT 
+  COUNT(country),
+  country,
+  AVG(place) AS avg_place
+  AVG(points) AS avg_points
+  MIN(place) AS hi_place, 
+  MAX(place) AS lo_place, 
+  MIN(points) AS min_points, 
+  MAX(points) AS max_points 
+FROM 
+  eurovision;
+GROUP BY 
+  country
+ORDER BY
+  avg_place ASC,
+  avg_points DESC;
+```
