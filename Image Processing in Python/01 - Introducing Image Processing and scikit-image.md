@@ -105,7 +105,7 @@ show_image(seville_horizontal_flip, 'Seville')
 ## Histograms
 In this exercise, you will analyze the amount of red in the image. To do this, the histogram of the red channel will be computed for the image shown below:
 
-![Woman smiling](image06.png)
+![Woman smiling](imgs/image06.png)
 
 _Image loaded as `image`._
 
