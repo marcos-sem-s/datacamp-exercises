@@ -270,5 +270,130 @@ You'll do this by rescaling the image of a rocket, that will be loaded from the 
 - Enlarge the rocket_image so it is 3 times bigger, with the anti aliasing filter applied. Make sure to set multichannel to True or you risk your session timing out!
 
 ``` python
+# Import the module and function to enlarge images
+from skimage.transform import rescale
 
+# Import the data module
+from skimage import data
+
+# Load the image from data
+rocket_image = data.rocket()
+
+# Enlarge the image so it is 3 times bigger
+enlarged_rocket_image = rescale(rocket_image, 3, anti_aliasing=True, multichannel=True)
+
+# Show original and resulting image
+show_image(rocket_image)
+show_image(enlarged_rocket_image, "3 times enlarged image")
 ```
+
+![alt text](image-16.png)
+
+> Wow! The image went from being 600 pixels wide to over 1700 and it still does not look poorly pixelated. Nice work!
+
+<br>
+
+## Proportionally resizing
+We want to downscale the images of a veterinary blog website so all of them have the same compressed size.
+
+It's important that you do this proportionally, meaning that these are not distorted.
+
+First, you'll try it out for one image so you know what code to test later in the rest of the pictures.
+
+![dogs in playground](image-17.png)
+
+_The image preloaded as `dogs_banner`._
+
+Remember that by looking at the shape of the image, you can know its width and height.
+
+**Instructions**
+
+- Import the module and function to resize.
+- Set the proportional height and width so it is half the image's height size.
+- Resize using the calculated proportional height and width.
+
+``` python
+# Import the module and function
+from skimage.transform import resize
+
+# Set proportional height so its half its size
+height = int(dogs_banner.shape[0] / 2)
+width = int(dogs_banner.shape[1] / 2)
+
+# Resize using the calculated proportional height and width
+image_resized = resize(dogs_banner, (height, width), anti_aliasing=True)
+
+# Show the original and resized image
+show_image(dogs_banner, 'Original')
+show_image(image_resized, 'Resized image')
+```
+
+![alt text](image-18.png)
+
+> Excellent! The image is now compressed and ready. We can use this code for future images that are uploaded to the website.
+
+<br>
+
+## Handwritten letters
+A very interesting use of computer vision in real-life solutions is performing Optical Character Recognition (**OCR**) to distinguish printed or handwritten text characters inside digital images of physical documents.
+
+Let's try to improve the definition of this handwritten letter so that it's easier to classify.
+
+![alt text](image-19.png)
+
+As we can see it's the letter R, already binary, with some noise in it. It's already loaded as `upper_r_image`.
+
+Apply the morphological operation that will discard the pixels near the letter boundaries.
+
+**Instructions**
+
+- Import the module from scikit-image.
+- Apply the morphological operation for eroding away the boundaries of regions of foreground pixels.
+
+``` python
+# Import the morphology module
+from skimage import morphology
+
+# Obtain the eroded shape 
+eroded_image_shape = morphology.binary_erosion(upper_r_image) 
+
+# See results
+show_image(upper_r_image, 'Original')
+show_image(eroded_image_shape, 'Eroded image')
+```
+
+![alt text](image-20.png)
+
+> Awesome work! As you can see, erosion is useful for removing minor white noise.
+
+<br>
+
+## Improving thresholded image
+In this exercise, we'll try to reduce the noise of a thresholded image using the dilation morphological operation.
+
+![World map](image-21.png)
+
+_Image already loaded as `world_image`._
+
+This operation, in a way, expands the objects in the image.
+
+Instructions
+100 XP
+Import the module.
+Obtain the binarized and dilated image, from the original image `world_image`.
+
+``` python
+# Import the module
+from skimage import morphology
+
+# Obtain the dilated image 
+dilated_image = morphology.binary_dilation(world_image) 
+
+# See results
+show_image(world_image, 'Original')
+show_image(dilated_image, 'Dilated image')
+```
+
+![alt text](image-22.png)
+
+> Great! You removed the noise of the segmented image and now it's more uniform.
