@@ -10,9 +10,11 @@ WHERE release_year > 2000;
 ```
 
 - [ ] Films released before the year 2000
-- [ ] Films released after the year 2000
-- [x] Films released after the year 2001
+- [x] Films released after the year 2000
+- [ ] Films released after the year 2001
 - [ ] Films released in 2000
+
+> Correct! Our query will return films that were released after the year 2000.
 
 <br>
 
@@ -48,6 +50,8 @@ FROM reviews
 WHERE num_votes >= 100000;
 ```
 
+> Well done! Applying a WHERE filter with SQL is much easier and faster than scrolling through a spreadsheet or using a highlighter!
+
 <br>
 
 ## Using WHERE with text
@@ -65,6 +69,8 @@ SELECT COUNT(language) AS count_spanish
 FROM films
 WHERE language = 'Spanish';
 ```
+
+> Bien hecho! Well done! There are `40` Spanish-language films in this table.
 
 <br>
 
@@ -101,6 +107,8 @@ FROM films
 WHERE (language = 'German')
     AND (release_year > 2000 AND release_year < 2010);
 ```
+
+> Great work! Combining conditions with `AND` will prove to be very useful when we want our query to return a specific subset of records.
 
 <br>
 
@@ -139,6 +147,8 @@ WHERE (release_year = 1990 OR release_year = 1999)
     AND gross > 2000000;
 ```
 
+> Amazing work! Some of these queries were pretty complex. Any Die Hard fans out there?
+
 <br>
 
 ## Using BETWEEN
@@ -153,7 +163,7 @@ We have broken the problem into smaller steps so that you can build the query as
 ``` sql
 SELECT title, release_year
 FROM films
-BETWEEN 1990 and 2000;
+WHERE release_year BETWEEN 1990 AND 2000;
 ```
 
 2. Build on your previous query to select only films with a `budget` over $100 million.
@@ -161,7 +171,7 @@ BETWEEN 1990 and 2000;
 ``` sql
 SELECT title, release_year
 FROM films
-WHERE relese BETWEEN 1990 and 2000
+WHERE relese_year BETWEEN 1990 and 2000
     AND budget > 100000000;
 ```
 
@@ -170,7 +180,7 @@ WHERE relese BETWEEN 1990 and 2000
 ``` sql
 SELECT title, release_year
 FROM films
-WHERE relese BETWEEN 1990 and 2000
+WHERE relese_year BETWEEN 1990 and 2000
     AND budget > 100000000
     AND language = 'Spanish';
 ```
@@ -180,10 +190,12 @@ WHERE relese BETWEEN 1990 and 2000
 ``` sql
 SELECT title, release_year
 FROM films
-WHERE relese BETWEEN 1990 and 2000
+WHERE relese_year BETWEEN 1990 and 2000
     AND budget > 100000000
     AND (language = 'Spanish' OR language = 'French');
 ```
+
+> Superb! Using `WHERE` with a combination of `AND`, `OR`, and `BETWEEN` is an efficient way to query a desired range of values.
 
 <br>
 
@@ -220,6 +232,8 @@ FROM people
 WHERE name NOT LIKE 'A%';
 ```
 
+> I `LIKE` to see the progress we're making! Filtering your data to find specified patterns is vital to your skillset. Our results still had names that started with `Á` with an accent, showing that we need to be specific with our filtering criteria.
+
 <br>
 
 ## WHERE IN
@@ -232,8 +246,8 @@ Try using the `IN` operator yourself!
 1. Select the `title` and `release_year` of all films released in 1990 or 2000 that were longer than two hours.
 
 ``` sql
-SELECT title, relese_year
-FROM film
+SELECT title, release_year
+FROM films
 WHERE release_year IN (1990, 2000)
     AND duration > 120;
 ```
@@ -242,7 +256,7 @@ WHERE release_year IN (1990, 2000)
 
 ``` sql
 SELECT title, language
-FROM film
+FROM films
 WHERE language IN ('English', 'Spanish', 'French');
 ```
 
@@ -250,10 +264,12 @@ WHERE language IN ('English', 'Spanish', 'French');
 
 ``` sql
 SELECT title, certification, language
-FROM film
+FROM films
 WHERE certification IN ('NC-17', 'R')
     AND language IN ('English', 'Italian', 'Greek');
 ```
+
+> Your SQL vocabulary is growing by the minute! Interestingly, `A Fistful of Dollars` starring Clint Eastwood is listed as `Italian`.
 
 <br>
 
@@ -279,6 +295,8 @@ WHERE release_year BETWEEN 1990 AND 1999
     AND certification IN ('G', 'PG', 'PG-13');
 ```
 
+> You've got a natural flair for filtering! Nice work, this filter tells us we have 310 films that the 90's obsessed teenagers can enjoy.
+
 <br>
 
 ## What does NULL mean?
@@ -288,6 +306,8 @@ I hope you were paying attention in the video. Pop quiz: What does NULL represen
 - [x] A missing value
 - [ ] An empty string
 - [ ] An invalid value
+
+> Correct! `NULL` is used to represent unknown values.
 
 <br>
 
@@ -313,3 +333,5 @@ SELECT COUNT(*) AS count_language_known
 FROM films
 WHERE language IS NOT NULL;
 ```
+
+> Alright! That's 4957 films with language data. We've mastered selecting and filtering data which means you're halfway through the course!

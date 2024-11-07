@@ -7,6 +7,8 @@ Which of the following statements is false? Select one answer
 - [ ] Semi-structured data allows some flexibility that structured data doesn't: different observations have different sizes.
 - [x] Structured data makes it harder to draw relationships with other data tables.
 
+> Good job! This statement is completely false: structured data make it super easy to draw relationships between tables.
+
 <br>
 
 ## What's the difference
@@ -21,6 +23,8 @@ Classify the statements to the data structure they correspond to.
 | Is easy to search and organize. | Is moderately easy to search and organize. | Is difficult to search and organize. |
 | Corresponds to data in tabular format. | Follows a model while allowing more flexibility than structured data. | Is usually stored in data lakes. |
 
+> Excellent job on this one! Structured, semi-structured and unstructured data are fundamental concepts in data engineering. Now let's learn a little more about SQL!
+
 <br>
 
 ## We can work it out
@@ -30,6 +34,8 @@ Which language is the industry standard to create, update, maintain and query da
 - [ ] Python
 - [x] SQL
 - [ ] JavaScript
+
+> Absolutely! Structured Query Language was developed in the 70s at IBM for the exact purpose of managing and retrieving data from structured/relational databases. 
 
 <br>
 
@@ -42,6 +48,8 @@ Which column allows these two tables to form a relational database? Select one a
 - [x] The `genre_id` column
 - [ ] The `genre_name` column
 - [ ] The `genre_superset` column
+
+> Exactly! The genre_id column appear in both tables, so it can be used to connect them.
 
 <br>
 
@@ -60,6 +68,8 @@ Decide whether these tasks should be taken care of by data engineers or data sci
 | Updating an artist's table after they edited their biography. | Querying the top songs of the past year to identify which genre dominated. |
 | Creating a new table to store the songs customers listened to the most over the past year. | Querying the lyrics table to find all the songs that have 'data' in the title. |
 
+> Kaboom! Now you can tell if someone is a data engineer or a data scientist just by asking how they use SQL! Onwards to the next lesson to learn more about the different data storage solutions.
+
 <br>
 
 ## Tell the truth
@@ -71,6 +81,8 @@ Which of the following statements is true? Select one answer
 - [x] A data warehouse is a type of database.
 - [ ] A relational database usually stores unstructured data.
 - [ ] The data lake stores well-organized, processed data that's easy to analyze.
+
+> Right! A "database" is a very general term, and a data warehouse is a type of database. Data warehouses also have subsets, like data marts, which are highly curated for a particular community of users, such as a specific team Data marts are also much smaller, tens of gigabytes instead of the hundreds of gigabytes to petabytes of data that can be held in a data warehouse.
 
 <br>
 
@@ -88,3 +100,5 @@ Classify the statements: do they apply to data lakes or data warehouses?
 | Stores raw data | Usually stores smaller amounts of data than the other. |
 | Is optimized for cost efficiency. | Is optimized for analysis. |
 | Can store structured, semi-structured and unstructured data. | Stores mainly structured data. |
+
+> Excellent job! You definitely know how to distinguish a data lake from a data warehouse, when it's better to use one versus the other, what they are optimized for and who uses them. Click Continue to jump in Chapter 3, and learn how data is moved and processed!

@@ -6,6 +6,8 @@ Which of the following are advantages of storing data in a database, rather than
 - [ ] Can be secured with encryption
 - [x] All of the above
 
+> Well done! There are many advantages of databases, which is why much of the world's data is stored in them.
+
 <br>
 
 ## Data organization
@@ -18,6 +20,8 @@ Take a look at the database below. Which of the following statements correctly d
 - [x] This is a relational database containing three tables: `employees`, `job_levels`, and `departments`.
 - [ ] This is a database, but it is not relational, because no relationship exists between job levels and departments.
 - [ ] This is not a database because there is no SQL code shown.
+
+> Well done! This is an example of how data in databases is organized into many tables.
 
 <br>
 
@@ -32,6 +36,8 @@ In the employees table, which fields do you believe is the most suitable choice 
 - [ ] year_hired
 - [x] id
 
+> Yes, that's right! `id` is unique across all current employees, and we can expect that new employees will receive unique ids as well.
+
 <br>
 
 ## Setting the table in style
@@ -41,6 +47,8 @@ Which table uses the correct naming format? Select one answer
 
 - [ ] ![alt text](./img/image03.png)
 - [x] ![alt text](./img/image04.png)
+
+> Getting naming conventions right makes life much easier when we begin writing SQL queries, so it's important to set ourselves up for success!
 
 <br>
 
@@ -58,6 +66,8 @@ Hit "Run Code" to see the `books` table.
 SELECT * FROM books;
 ```
 
+> Did you notice that each record contains information about a book, organized into `id`, `title`, `author`, `year`, and `genre` fields?
+
 <br>
 
 ## At your service
@@ -70,6 +80,8 @@ Select the statement about database storage that is _false_. Select one answer
 - [x] Servers are usually personal computers such as laptops.
 - [ ] Data from a database is physically stored on a server.
 
+> That's right! While it is technically possible for a laptop to be a server, laptops aren't well suited to the job since they are not powerful enough to handle many requests at once and don't have as much storage capacity as larger computers.
+
 <br>
 
 ## Finding data types
@@ -79,6 +91,8 @@ Imagine that you are starting a new job and have just started getting to know yo
 - [ ] You can find this information by looking at a diagram of relationships between tables.
 - [ ] You can find this information by looking at the values in each field for each table.
 - [x] You can find this information by looking at a database schema.
+
+> Awesome work. Database schemas show data types for each field in all tables, and they also show relationships between tables. Looking at a schema is an excellent way to get to know a new database!
 
 <br>
 
@@ -95,3 +109,5 @@ Sort each item into the correct data type.
 | ------- | --- | ------- |
 | Phone number such as 321-123-5555 | Number of mailing list subscribers such as 9782 | Weight in tons such as 5.67 |
 | Product reviews written by customers | Model year such as 2004 | Product prices in dollars such as 63.75 |
+
+> Congratulations! Now that you know what data types to expect in each field, we're ready to query!

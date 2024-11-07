@@ -14,6 +14,8 @@ Classify the operations as Extract, Transform or Load operations.
 | Collecting data from Google Analytics about our web-marketing promotion offering 3 months of access to the premium tier. | Summarizing the yearly listening activity to tell users how many hours they've listened to music on Spotflix this year. | Saving the new order of a playlist that was sorted based on the date songs were added, so that it remains that way the next time the user connects.|
 | Pulling the top 20 songs users have been listening to on a loop. | Sorting a playlist's songs based on the date they were added. | Writing all the followers of a user in a table. |
 
+> Great job connecting the dots! As you can see, most of the data processing steps are transformation steps including selecting, encoding, calculating new values, sorting and ordering, joining data from multiple sources, aggregating, pivoting tables, splitting one table into several ones, removing duplicate values. Depending on the context, validating data can be considered part of the extract step (you don't extract if it's not necessary), or the transform step (you check that your results make sense before saving them). OK, now that you know about processing tasks, let's see how to schedule them!
+
 <br>
 
 ## Schedules
@@ -30,6 +32,8 @@ Correctly classify the actions as being run manually, at a specific time, or if 
 | Running the song encoding pipeline, because engineering changed the encoder and wants to make sure they still pass the validation check. | Collecting data from Google Analytics every morning to check how the promotion campaign is going. | Updating the number of followers in a playlist table after a user subscribed to it. |
 |  | Processing music videos uploaded by artists every hour. |  |
 |  | Generating the Spotflix Weekly Playlist from Chapter 1 every Monday at 00:00 AM. |  |
+
+> Excellent! You definitely know how to schedule data processing tasks, what the different types of schedules are, and when they are appropriate. Let's go to the next exercise to see how well you understand batching and streaming!
 
 <br>
 
@@ -49,6 +53,8 @@ Correctly classify the actions as being batched or streamed.
 | Loading new employees to Spotflix's employee table. | When a user listens to songs that are being recommended in real time, loading his upvotes and downvotes on each song. |
 | Reducing access to premium features when someone unsubscribes. | Updating the count of followers in a playlist when a user subscribes to it. |
 
+> OK! Once again, don't worry if you got some of it wrong. What matters is that hopefully, you now understand why these situations were categorized the way they were. In a nutshell, batch processing can be scheduled when resources aren't being used elsewhere, which makes it cheap. Stream processing, on the other hand is used if you need the latest data: the urgency of showing the latest data help you decide if you need it. Onwards to parallel computing!
+
 <br>
 
 ## Whenever, whenever
@@ -58,6 +64,8 @@ Is her statement actually true or false? Select one answer
 
 - [ ] True
 - [x] False
+
+> Yup! This statement is wrong. It's OK: interns are here to learn, and we appreciate her passion and proactiveness!
 
 <br>
 
@@ -76,6 +84,8 @@ Classify the statements as either right or wrong.
 | Parallel computing is used to provide extra processing power. | Parallel computing can't be used to optimize for memory usage. |
 | It's a good idea to use parallel computing to encode songs uploaded by artists to the .ogg format that Spotflix prefers. | It's a good idea to use parallel computing to update the employees table every morning. |
 
+> Great job helping Sasha improve. You're really getting the hang of this! OK, let's get to the last topic of this course: cloud computing!
+
 <br>
 
 ## Obscured by clouds
@@ -92,6 +102,8 @@ Classify the statements as either right or wrong.
 | Leveraging the cloud instead of having our own on-premises data center allows us to use just the resources we need, when we need them. | Multicloud solutions reduce security and governance concerns. |
 | Cloud computing encompasses storage, database and computing solutions. | EC2, S3 and RDS are solutions offered by Microsoft Azure. |
 | A multicloud solution reduces reliance on a single vendor. | Cloud computing reduces all kinds of risk. |
+
+> Well played! You've empowered your data engineer intern. Now, not only does she have a more nuanced point of view and knows she can come to you with questions, you also sense that your intern is better prepared for her job. One last exercise to check how well you know the different cloud providers and their respective solutions!
 
 <br>
 
@@ -111,3 +123,5 @@ Correctly classify the cloud services solutions as either computing, or database
 | Azure Virtual Machines | AWS Redshift (data warehouse) |
 | AWS EC2 | Snowflake Data Warehouse |
 |  | Google Cloud Datastore (NoSQL) |
+
+> Snowflake, founded in 2012, is disrupting the data warehouse industry and enjoyed a 174% revenue growth in 2019. That might be a name to remember! Alright, excellent job! In a couple hours, you went from wondering what data engineering is to being able to classify cloud solutions. Impressive! One last video and you're good to go!

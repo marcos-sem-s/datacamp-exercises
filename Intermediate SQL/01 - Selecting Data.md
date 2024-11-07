@@ -15,6 +15,8 @@ Run the query in the console to test your theory!
 - [ ] The total number of records in the reviews table.
 - [ ] The sum of the film_id field.
 
+> Correct! `COUNT(field_name)` returns the number of records containing a value in a field. In this example, that field is `film_id`.
+
 <br>
 
 ## Practice with COUNT()
@@ -45,6 +47,8 @@ SELECT COUNT(language) AS count_languages, COUNT(country) AS count_countries
 FROM films;
 ```
 
+> Tres Bien! Looking at the differences between the count of unique values, total values, and all records can provide useful insights into your data.
+
 <br>
 
 ## SELECT DISTINCT
@@ -68,6 +72,8 @@ SELECT COUNT(DISTINCT country) as count_distinct_countries
 FROM films;
 ```
 
+> Congratulations! Using `DISTINCT` is a great tool to see the unique values of a dataset. This table has `64` unique countries.
+
 <br>
 
 ## Order of execution
@@ -82,6 +88,8 @@ Drag the SQL keywords into the order that they will be executed in (not the writ
 1. `FROM`
 2. `SELECT`
 3. `LIMIT`
+
+> Congratulations! This is the correct order of execution. It makes sense that SQL needs to know where to `SELECT` data `FROM` before it can `LIMIT` the results.
 
 <br>
 
@@ -114,6 +122,8 @@ SELECT COUNT(birthdate) AS count_birthdays
 FROM people;
 ```
 
+> Excellent extermination of those bugs! This is an important skill that will come in very handy.
+
 <br>
 
 ## SQL best practices
@@ -133,6 +143,8 @@ Drag and drop the items into the correct zone.
 | End queries with a semicolon | Write lots of queries with no semicolon |
 | Use underscores in field names rather than spaces | Write the query on one line |
 
+> Well done! You'll soon become everyone's favorite SQL programmer.
+
 <br>
 
 ## Formatting
@@ -149,6 +161,8 @@ SELECT person_id, role
 FROM roles
 LIMIT 10;
 ```
+
+> Great work formatting the code! Clean code allows for clean communication.
 
 <br>
 
@@ -167,3 +181,5 @@ FROM reviews;
 - [ ] facebook likes
 - [x] "facebook likes"
 - [ ] facebook, likes
+
+> Correct! Using double quotes around a non-standard name allows us to run the SQL query.

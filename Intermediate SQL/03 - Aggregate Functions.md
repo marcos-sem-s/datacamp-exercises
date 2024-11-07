@@ -21,6 +21,8 @@ Classify the function based on what data type it is compatible with.
 | `SUM()` | `MIN()` |
 |  | `COUNT()` |
 
+> Congratulations! You've got aggregate functions under control.
+
 <br>
 
 ## Practice with aggregate functions
@@ -34,29 +36,31 @@ Now it's your turn to get more insights about the `films` table!
 
 ``` sql 
 SELECT SUM(duration) AS total_duration
-from films
+from films;
 ```
 
 2. Calculate the average duration of all films and alias with `average_duration`.
 
 ``` sql 
 SELECT AVG(duration) AS average_duration
-from films
+from films;
 ```
 
 3. Find the most recent `release_year` in the `films` table, aliasing as `latest_year`.
 
 ``` sql 
 SELECT MAX(release_year) AS latest_year
-from films
+from films;
 ```
 
 4. Find the duration of the shortest film and use the alias `shortest_film`.
 
 ``` sql 
 SELECT MIN(duration) AS shortest_film
-from films
+from films;
 ```
+
+> Well done! You'll find yourself using aggregate functions over and over again to get a quick grasp of the data in a SQL database.
 
 <br>
 

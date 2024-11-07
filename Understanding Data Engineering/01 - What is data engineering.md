@@ -12,6 +12,8 @@ Order the steps on chronologically (the step happening first should be at the to
 3. Exploration and visualization
 4. Experimentation and prediction
 
+> Great job! You know how data flows through an organization. Let's jump in the next exercise to check how well you understand a data engineer's responsibilities!
+
 <br>
 
 ## Not responsible
@@ -31,6 +33,8 @@ Here are several tasks related to working with data. Classify them in two bucket
 | Optimizing the customers databases for analysis. | Building a visualization to understand listening patterns by city. |
 | Ensuring corrupted, unreadable music tracks are removed and don't end up facing customers. | Running an experiment to identify the optimal search bar positioning in the app. |
 
+> Fantastic! You definitely know what a data engineer is responsible for, and it's also much clearer for your colleague now.
+
 <br>
 
 ## Big time
@@ -48,6 +52,8 @@ Classify the statements as either true of false.
 | Data types refer to the variety of the data. | Volume has to do with how trustworthy the data is. |
 |  | Veracity refers to how frequently the data is generated. |
 
+> Awesome job! Now you have a clear understanding of what qualifies big data, beyond the buzzword. Let's jump in the next lesson, where we will compare data engineers and data scientists in more details.
+
 <br>
 
 ## Tell me the truth
@@ -59,6 +65,8 @@ Let's have a quick sanity check: which of the following options is true? Select 
 - [ ] Data scientists build pipelines.
 - [ ] Data engineers need strong statistical expertise.
 - [x] Data engineers enable data scientists.
+
+> Yes! Data engineers lay the groundwork that makes data science possible.
 
 <br>
 
@@ -75,6 +83,8 @@ Assign the tasks to the data engineer or the data scientist.
 | Ensure that people who use the databases can't erase music videos by mistake. | Use Python to run an analysis on whether users prefer having the search bar on the top left or the top right of the Spotflix desktop app. |
 | Use Java to build a pipeline collecting album covers and storing them. | Find out in which countries certain artists are popular to give them insights on where to tour. |
 
+> All right! Your understanding of the world of data engineering is increasing by the minute. Onwards to the next video to learn about the most fundamental concept in data engineering: data pipelines!
+
 <br>
 
 ## It's not true
@@ -86,6 +96,8 @@ Most of the options below are true, but one is false. Which one is it? Select on
 - [ ] Data pipelines automate data extraction.
 - [x] Data pipelines necessarily include a transformation step.
 - [ ] ETL stands for Extract, Transform, Load.
+
+> ETL stands for Extract, Transform, Load and is a popular framework for designing data pipelines. However, data pipelines do not necessarily include a transformation step.
 
 <br>
 
@@ -107,3 +119,5 @@ Order the steps chronologically (the step happening first should be at the top a
 3. Load only the 10 top songs these users listened to the most over the past week  into a table called "Similar profiles"
 4. Extract only songs these other users listen to that are of the same genre as the ones in Julian's listening sessions. These are our recommendations.
 5. Load the recommended songs into a new table. That's Julian's Weekly Playlist!
+
+> Excellent job! And just like that, you reached the end of Chapter 1. Congratulations! Jump into Chapter 2 to learn more about the different ways to data and optimize this storage, before diving into data processing in Chapter 3! By the way, you may have noticed the exercise titles are actually song titles. That remains true throughout the course. So here's the deal: if you make it to the end of the course, I will tell you where to find the playlist!

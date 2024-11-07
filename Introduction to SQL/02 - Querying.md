@@ -5,6 +5,8 @@ Which of the below scenarios describes a situation in which using SQL would be u
 - [x] Large amounts of data about many different but related areas of a business are housed in a relational database.
 - [ ] The data needed to answer the business question doesn't exist yet.
 
+> Exactly! When we've got this type of vast and interrelated data, SQL is excellent for targeting and returning only the data which is relevant to our business question.
+
 <br>
 
 ## Developing SQL style
@@ -30,6 +32,8 @@ Drag each suggestion to the proper zone depending on whether or not it will impr
 | make `CARD_NUM` and `TOTAL_FINE` lowercase | Capitalize `patrons` |
 | Capitalize `from` | Make `SELECT` lowercase |
 | Add a `;` at the end of the query | All code should be just one line |
+
+> Great style! Your coworkers will thank you when you share clean and readable queries with them.
 
 <br>
 
@@ -62,6 +66,8 @@ SELECT *
 FROM books;
 ```
 
+> Well done! You've mastered your first two SQL keywords. The more keywords you know, the more complex SQL queries you'll be able to write!
+
 <br>
 
 ## Making queries DISTINCT
@@ -84,6 +90,8 @@ SELECT DISTINCT author, genre
 FROM books;
 ```
 
+> You've passed this exercise with `DISTINCT`ion! Notice that you found 247 unique authors in the `books` table overall but 249 unique combinations of authors and genres. This means there are one or two authors who have written books in multiple genres!
+
 <br>
 
 ## Aliasing
@@ -99,14 +107,18 @@ SELECT DISTINCT author AS unique_author
 FROM books;
 ```
 
+> It's `AS` easy `AS` that! Great work. The alias you just implemented makes it clear that only unique authors are listed in the results and that there are no duplicates. This is clear even to someone who is reading only the result set and does not know the SQL code behind the results.
+
 <br>
 
 ## VIEWing your query
 You've worked hard to create the below SQL query:
+
 ``` sql
 SELECT DISTINCT author AS unique_author
 FROM books;
 ```
+
 What if you'd like to be able to refer to it later, or allow others to access and use the results? The best way to do this is by creating a view. Recall that a view is a virtual table: it's very similar to a real table, but rather than the data itself being stored, the query code is stored for later use.
 
 **Instructions**
@@ -125,6 +137,8 @@ SELECT *
 FROM library_authors
 ```
 
+> Amazing! As your SQL queries become long and complex, you'll want to be able to save your queries for referencing later. Views can also be useful when the information contained in a database table isn't quite what you need. You can create your own custom view with exactly the information you are looking for, without needing to edit the database itself, which you may not have permission to do. Creating views is a valuable skill to have, and you've mastered it!
+
 <br>
 
 ## Comparing flavors
@@ -138,6 +152,8 @@ Drag the statement to the database management system that it correctly describes
 | Developed at University of California, Berkeley | Has both free and enterprise versions |
 | Research funds provided by DARPA | Created by Microsoft |
 | Free and open source | Queried using T-SQL |
+
+> Excellent work! Both SQL Server and PostgreSQL are very popular SQL flavors. As your SQL journey continues, you're sure to see their names pop up!
 
 <br>
 
@@ -158,6 +174,8 @@ FROM books
 LIMIT 10;
 ```
 
+> There's no `LIMIT` to your SQL skills! Great work. You can see from this exercise how it's nice to work with small result sets by limiting the number of results.
+
 <br>
 
 ## Translating between flavors
@@ -175,3 +193,5 @@ The database in this course is a PostgreSQL database, so you won't be able to ru
 - [ ] Replace `SELECT`, `FROM`, and `LIMIT` with the corresponding SQL Server keywords
 - [x] Remove `LIMIT` statement and add `TOP(10)` after `SELECT`
 - [ ] Replace `LIMIT` with `TOP` and remove the ; at the end of the query
+
+> Looks like you've got the _flavor_ of things! Great work. Only a few keyword differences exist between PostgreSQL and SQL Server—most syntax is the same!
