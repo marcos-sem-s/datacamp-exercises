@@ -38,7 +38,7 @@ Here's the table in English:
 ## Cloud computing services
 Cloud providers like AWS, Microsoft Azure, and Google Cloud offer a wide variety of services. Below you can find an overview of the products available on AWS.
 
-![AWS product offer](img/image.png)
+![AWS product offer](img/image01.png)
 
 Which service is included in the AWS offer? Select one answer.
 
