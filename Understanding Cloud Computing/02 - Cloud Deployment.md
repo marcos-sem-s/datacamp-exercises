@@ -64,4 +64,35 @@ Decide whether each type of data can be labelled as personal data.
 
 > Great job! Most data collected on a users ends up being personal data. Personal data takes up a lot of the data collected by companies, so it can have a profound impact on how data is collected, stored, and moved on the cloud.
 
-## 
+<br>
+
+## Microsoft cloud skills report
+In 2017, Microsoft released a "Cloud Skills Report" where they surveyed 250 technical leaders in the UK who are actively involved in recruitment and technical evaluation. The report is publicly available [here](https://download.microsoft.com/documents/en-gb/Microsoft_Cloud_Skill_Report.pdf).
+
+Below is a plot from the report which splits responses between medium sized organizations (250-999 employees) and large-sized organizations (1000+ employees):
+
+![Microsoft Cloud Skills Report](img/image02.png)
+
+What does this plot indicate about cloud skills? Select one answer.
+
+- [x] More than 80% of respondents believe that the right cloud skills will be important or critical to their organization's digital transformation.
+- [ ] Many organizations don't realize the importance of cloud skills yet.
+- [ ] Organizations are struggling to fill their cloud skills gap.
+
+> Right on! Are you convinced of the importance of cloud skills? Once this skills gap is identified in an organization, it's another task to understand the cloud roles you need and which employees need to be up-skilled. This work is necessary for a successful digital transformation!
+
+<br>
+
+## Cloud roles
+The rise of cloud computing has brought on a new wave of technology roles. In this exercise, each responsibility belongs to a role.
+
+**Instructions**
+
+Arrange each statement based on the role it best describes.
+
+| Cloud Architect | Security Engineer | DevOps Engineer |
+| --------------- | ----------------- | --------------- |
+| Design cloud infrastructure based on business requirements | Spec out technical security requirements based on regulations and business requirements | Maintain infrastructure through code |
+| Solutions architect of the cloud| Ensure data privacy of users and the organization is protected | Ensure reliability, availability, and scalability through automation |
+
+> Looks like you have a good grasp of the different roles! Remember that cloud skills aren't limited to these roles. Whether you're data scientist or analyst, there are many ways you can leverage the cloud. Congrats on finishing this chapter!
