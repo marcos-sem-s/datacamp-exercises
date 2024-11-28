@@ -150,10 +150,33 @@ Data source: [Bayesian Statistics & Marketing](http://www.perossi.org/home/bsm-1
 
 Categorize these statements about the correlation heatmap as true or false.
 
->
+| True | False |
+| ---- | ----- |
+| People who drank The Singleton were unlikely to drink Chivas Regal.| People who drank Glenlivet were also likely to drink J & B. |
+| There was no correlation between drinkers of Clan Macgregor and drinkers of Chivas Regal. | There was no correlation between drinkers of Johnnie Walker Red Label and drinkers of Johnnie Walker Black Label. |
+| People who drank Glenfiddich were also likely to drink Glenlivet. | People who drank Knockando were unlikely to drink Macallan. |
+
+> Sláinte! Correlation heatmaps are a great way to visualize the correlation between many continuous variables at once.
 
 <br>
 
-## 
+## Interpreting parallel coordinates plots
+Parallel coordinates plots are designed to help you view the relationship between many continuous variables at once.
 
-> 
+Here is a dataset of fatty acid levels in olive oils samples from six regions in Italy. Each line in the plot represents one oil sample. Since the region is a categorical variable, you have six parallel coordinates plots, one in each panel.
+
+![A parallel coordinates plot of fatty acid levels in olive oils from six regions in Italy.](image-28.png)
+
+Data source: [Graphics of large datasets](https://www.springer.com/gp/book/9780387329062)
+
+**Instructions**
+
+Categorize these statements about the parallel coordinates plot as true or false.
+
+| True | False |
+| ---- | ----- |
+| Oils from both regions in the North have high levels of oleic acid. | Oils from Inland-Sardinia in Sardinia have a wide variety of levels of oleic acid. |
+| Oils from both regions in Sardinia have low levels of eicosenoic acid and high levels of linoleic acid. | Oils from West-Liguria in the North have high levels of linolenic acid. |
+| Oils from Calabria in the South have a wide variety of levels of eicosenoic acid and stearic acid. | Oils from South-Apulia in the South are more consistent in fatty acid levels than other regions. |
+
+> Outstanding olive oil analysis! Parallel coordinates plots let you explore the relationship between many continuous variables at once.
