@@ -184,9 +184,14 @@ SELECT CURRENT_DATE, CURRENT_TIME;
 SELECT CONCAT(CURRENT_DATE, ' ', CURRENT_TIME)::TIMESTAMP;
 ```
 
-3. 
+3. Extract month from the concatenated timestamp and alias as `concat_month`. Filter records from `uber_request_data` where `request_timestamp`'s month is greater or equal than `concat_month`.
 
-> 
+``` sql
+SELECT 
+    *,
+	EXTRACT(month FROM CONCAT(CURRENT_DATE, ' ', CURRENT_TIME)::TIMESTAMP) AS concat_month
+FROM uber_request_data
+WHERE EXTRACT(month FROM request_timestamp) >= concat_month;
+```
 
-<br>
-
+> Your grasp over date and time functions is timeless! The filtering of records based on a column can also be done and simplified using subqueries and CTEs, we will study in the upcoming videos
