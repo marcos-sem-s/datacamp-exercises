@@ -156,7 +156,7 @@ Let's try to run a query based on this schema. How about we try to find the numb
 **Instructions**
 
 1. Calculate the sum of the duration_mins column.
-2. 
+2. Join week_dim and runs_fact. Get all the week_id's from July, 2019.
 
 ``` sql
 SELECT 
@@ -168,4 +168,3 @@ WHERE month = 'July' and year = '2019';
 ```
 
 > Nice! It looks like you've run 381.46 minutes in July. Because of its structure, the dimensional model usually require queries involving more than one table.
-
